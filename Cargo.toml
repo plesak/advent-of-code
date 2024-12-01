@@ -1,0 +1,9 @@
+[package]
+name = "advent"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+num = "0.4.3"
+itertools = "0.13.0"
+ndarray = "0.16.1"
