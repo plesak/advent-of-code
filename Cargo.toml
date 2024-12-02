@@ -1,9 +1,22 @@
 [package]
 name = "advent"
 version = "0.2.0"
+authors = ["plesak"]
 edition = "2021"
 
 [dependencies]
 num = "0.4.3"
 itertools = "0.13.0"
 ndarray = "0.16.1"
+
+[dev-dependencies]
+criterion = { version = "0.4", features = ["html_reports"] }
+codspeed-criterion-compat = "2.7.2"
+
+[lib]
+name = "advent_of_code"
+path = "src/lib.rs"
+
+[[bench]]
+name = "aoc_bench"
+harness = false
