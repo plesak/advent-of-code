@@ -10,13 +10,12 @@ fn parse_col(inp: &str) -> (i32, i32) {
     )
 }
 
-pub fn part1(inp: &str) -> impl Display {
-    let input: Vec<&str> = inp.split('\n').collect();
+pub fn part1(input: &str) -> impl Display {
 
     let mut a_list: BinaryHeap<i32> = BinaryHeap::new();
     let mut b_list: BinaryHeap<i32> = BinaryHeap::new();
 
-    for ln in input {
+    for ln in input.lines() {
         let (a, b) = parse_col(ln);
         a_list.push(a);
         b_list.push(b);
@@ -31,13 +30,12 @@ pub fn part1(inp: &str) -> impl Display {
     total_dist
 }
 
-pub fn part2(inp: &str) -> impl Display {
-    let input: Vec<&str> = inp.split('\n').collect();
+pub fn part2(input: &str) -> impl Display {
 
     let mut a_list: HashMap<i32, i32> = HashMap::new();
     let mut b_list: HashMap<i32, i32> = HashMap::new();
 
-    for ln in input {
+    for ln in input.lines() {
         let (a, b) = parse_col(ln);
         *a_list.entry(a).or_insert(0) += 1;
         *b_list.entry(b).or_insert(0) += 1;
