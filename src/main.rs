@@ -5,9 +5,9 @@ use crate::y23::*;
 
 mod day1;
 mod day2;
-// mod day3;
+mod day3;
+mod day4;
 
-use advent_of_code::day3;
 use std::time::Instant;
 use std::{env, fs, io};
 
@@ -44,6 +44,8 @@ fn main() {
             "y24q2q2" => day2::part2(&inp).to_string(),
             "y24q3q1" => day3::part1(&inp).to_string(),
             "y24q3q2" => day3::part2(&inp).to_string(),
+            "y24q4q1" => day4::part1(&inp).to_string(),
+            "y24q4q2" => day4::part2(&inp).to_string(),
             _ => panic!("Question not implemented! {}", question_id),
         }
     } else if yr == "y23" {
