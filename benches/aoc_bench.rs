@@ -28,11 +28,11 @@ fn bench_day3_part2(c: &mut Criterion) {
 }
 
 fn bench_day4_part1(c: &mut Criterion) {
-    let input = include_str!("../inputs/y24q4q1.txt");
+    let input = include_str!("../inputs/day4.txt");
     c.bench_function("day4_part1", |b| b.iter(|| advent_of_code::day4::part1(input)));
 }
 fn bench_day4_part2(c: &mut Criterion) {
-    let input = include_str!("../inputs/y24q4q2.txt");
+    let input = include_str!("../inputs/day4.txt");
     c.bench_function("day4_part2", |b| b.iter(|| advent_of_code::day4::part2(input)));
 }
 
