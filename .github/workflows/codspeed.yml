@@ -11,11 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup rust toolchain, cache and cargo-codspeed binary
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          bins: cargo-codspeed, aoc-cli
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Download available input files
         env:
