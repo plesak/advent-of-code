@@ -6,6 +6,7 @@ version = 3
 name = "advent"
 version = "0.2.0"
 dependencies = [
+ "codspeed",
  "codspeed-criterion-compat",
  "criterion 0.4.0",
  "itertools 0.13.0",

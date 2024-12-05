@@ -12,6 +12,7 @@ regex = "1.11.1"
 
 [dev-dependencies]
 criterion = { version = "0.4", features = ["html_reports"] }
+codspeed = "2.7.2"
 codspeed-criterion-compat = "2.7.2"
 
 [lib]

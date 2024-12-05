@@ -16,3 +16,7 @@ Cargo.lock
 -----------
 # RustRover
 .idea/
+
+# input files shouldnt be checked in
+input_files/
+inputs/
