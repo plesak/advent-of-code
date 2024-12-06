@@ -7,11 +7,12 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 use clap::Parser;
+use std::fs;
 use std::path::PathBuf;
 use std::time::Instant;
-use std::fs;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -67,6 +68,8 @@ fn main() {
             "day3_part2" => day3::part2(&input).to_string(),
             "day4_part1" => day4::part1(&input).to_string(),
             "day4_part2" => day4::part2(&input).to_string(),
+            "day5_part1" => day5::part1(&input).to_string(),
+            "day5_part2" => day5::part2(&input).to_string(),
             _ => panic!("Question not implemented! Arguments: {}", q),
         }
     } else if year == "y23" {
