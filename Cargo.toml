@@ -1,6 +1,6 @@
 [package]
 name = "advent"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["plesak"]
 edition = "2021"
 
@@ -9,7 +9,7 @@ num = "0.4.3"
 itertools = "0.13.0"
 ndarray = "0.16.1"
 regex = "1.11.1"
-clap = { version = "4.5.22", features = ["derive"] }
+clap = { version = "4.5.23", features = ["derive"] }
 
 [dev-dependencies]
 criterion = { version = "0.5.1", features = ["html_reports"] }

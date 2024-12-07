@@ -8,6 +8,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 use clap::Parser;
 use std::fs;
@@ -70,6 +71,8 @@ fn main() {
             "day4_part2" => day4::part2(&input).to_string(),
             "day5_part1" => day5::part1(&input).to_string(),
             "day5_part2" => day5::part2(&input).to_string(),
+            "day6_part1" => day6::part1(&input).to_string(),
+            "day6_part2" => day6::part2(&input).to_string(),
             _ => panic!("Question not implemented! Arguments: {}", q),
         }
     } else if year == "y23" {
