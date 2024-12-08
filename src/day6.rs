@@ -1,13 +1,6 @@
-use ndarray::Array2;
 use std::collections::{HashMap, HashSet};
 use std::fmt::Display;
 
-fn inp_to_array2(input: Vec<&str>) -> Array2<char> {
-    let nrows = input.len();
-    let ncols = input[0].len();
-    let flat_vec: Vec<char> = input.concat().chars().collect();
-    Array2::from_shape_vec((nrows, ncols), flat_vec).unwrap()
-}
 
 pub fn part1(inp: &str) -> impl Display {
 
@@ -139,8 +132,7 @@ fn determine_if_grid_loops(
     // println!("obstacles_by_col: {:?}", obstacles_by_col);
     // println!("current_dir: {:?}", current_dir);
 
-    let mut in_grid = true;
-    while in_grid {
+    loop {
         let x = current_coord.0;
         let y = current_coord.1;
         match &current_dir {
@@ -271,7 +263,6 @@ fn determine_if_grid_loops(
             _ => panic!("unknown dir {}", current_dir),
         }
     }
-    false
 }
 
 pub fn part2(inp: &str) -> impl Display {
