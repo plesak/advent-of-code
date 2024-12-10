@@ -49,7 +49,7 @@ pub fn part1(inp: &str) -> impl Display {
                     // println!("we hit each other!! at {}", i);
                     break;
                 }
-                let mut file_size;
+                let file_size;
                 if leftover_file_size > 0 {
                     file_size = leftover_file_size;
                 } else {

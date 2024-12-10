@@ -81,6 +81,15 @@ fn bench_day9_part2(c: &mut Criterion) {
     c.bench_function("day9_part2", |b| b.iter(|| advent_of_code::day9::part2(input)));
 }
 
+fn bench_day10_part1(c: &mut Criterion) {
+    let input = include_str!("../inputs/day10.txt");
+    c.bench_function("day10_part1", |b| b.iter(|| advent_of_code::day10::part1(input)));
+}
+fn bench_day10_part2(c: &mut Criterion) {
+    let input = include_str!("../inputs/day10.txt");
+    c.bench_function("day10_part2", |b| b.iter(|| advent_of_code::day10::part2(input)));
+}
+
 criterion_group!(benches,
     bench_day1_part1,
     bench_day1_part2,
@@ -100,5 +109,7 @@ criterion_group!(benches,
     bench_day8_part2,
     bench_day9_part1,
     bench_day9_part2,
+    bench_day10_part1,
+    bench_day10_part2,
 );
 criterion_main!(benches);
