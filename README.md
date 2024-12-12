@@ -1,5 +1,6 @@
-Learning Rust via Advent of Code exercises. The early ones are really not great.
+Learning Rust via Advent of Code exercises!
 
+See [Advent of Code]([url](https://adventofcode.com/)).
 
 To run a specific day/part, use
 
