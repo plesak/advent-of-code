@@ -1,4 +1,3 @@
-use itertools::Itertools;
 use num::Integer;
 use std::collections::HashMap;
 use std::fmt::Display;
@@ -31,7 +30,7 @@ fn blink(stones: HashMap<usize, usize>, mut memo: HashMap<usize, Vec<usize>>)
          -> (HashMap<usize, usize>, HashMap<usize, Vec<usize>>) {
     let mut new_stones: HashMap<usize, usize> = HashMap::new();
     for (stone, count) in stones {
-        let mut next_up: Vec<usize>;
+        let next_up: Vec<usize>;
         if let Some(v) = memo.get(&stone) {
             next_up = v.clone();
         } else {
@@ -39,7 +38,7 @@ fn blink(stones: HashMap<usize, usize>, mut memo: HashMap<usize, Vec<usize>>)
             memo.insert(stone, next_up.clone());
         }
         for new_stone in next_up {
-            let mut e = new_stones.entry(new_stone).or_insert(0);
+            let e = new_stones.entry(new_stone).or_insert(0);
             *e += count;
         }
     }
