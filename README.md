@@ -1,6 +1,6 @@
 Learning Rust via Advent of Code exercises!
 
-See [Advent of Code]([url](https://adventofcode.com/)).
+See [Advent of Code](https://adventofcode.com/).
 
 To run a specific day/part, use
 
