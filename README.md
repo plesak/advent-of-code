@@ -7,4 +7,4 @@ See [Advent of Code](https://adventofcode.com/).
 
 To run a specific day/part, use
 
-`cargo run day? part? [-202?] [-e]`
+`cargo run day? part? [-202?] [--example]`
