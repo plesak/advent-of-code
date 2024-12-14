@@ -108,6 +108,24 @@ fn bench_day12_part2(c: &mut Criterion) {
     c.bench_function("day12_part2", |b| b.iter(|| advent_of_code::day12::part2(input)));
 }
 
+fn bench_day13_part1(c: &mut Criterion) {
+    let input = include_str!("../inputs/day13.txt");
+    c.bench_function("day13_part1", |b| b.iter(|| advent_of_code::day13::part1(input)));
+}
+fn bench_day13_part2(c: &mut Criterion) {
+    let input = include_str!("../inputs/day13.txt");
+    c.bench_function("day13_part2", |b| b.iter(|| advent_of_code::day13::part2(input)));
+}
+
+fn bench_day14_part1(c: &mut Criterion) {
+    let input = include_str!("../inputs/day14.txt");
+    c.bench_function("day14_part1", |b| b.iter(|| advent_of_code::day13::part2(input)));
+}
+fn bench_day14_part2(c: &mut Criterion) {
+    let input = include_str!("../inputs/day14.txt");
+    c.bench_function("day14_part2", |b| b.iter(|| advent_of_code::day13::part2(input)));
+}
+
 criterion_group!(benches,
     bench_day1_part1,
     bench_day1_part2,
@@ -133,5 +151,9 @@ criterion_group!(benches,
     bench_day11_part2,
     bench_day12_part1,
     bench_day12_part2,
+    bench_day13_part1,
+    bench_day13_part2,
+    bench_day14_part1,
+    bench_day14_part2,
 );
 criterion_main!(benches);

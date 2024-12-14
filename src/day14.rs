@@ -36,7 +36,7 @@ pub fn part1(inp: &str) -> impl Display {
 
         let new_x = (p_x + v_x * SECONDS).rem_euclid(NROWS);
         let new_y = (p_y + v_y * SECONDS).rem_euclid(NCOLS);
-        println!("robot from {},{} speed {},{} found at {},{}", p_x, p_y, v_x, v_y, new_x, new_y);
+        // println!("robot from {},{} speed {},{} found at {},{}", p_x, p_y, v_x, v_y, new_x, new_y);
 
         if new_x < NROWS / 2 {
             if new_y < NCOLS / 2 {
@@ -52,7 +52,7 @@ pub fn part1(inp: &str) -> impl Display {
             }
         }
     }
-    println!("robots in qs: {:?}", robots_in_qs);
+    // println!("robots in qs: {:?}", robots_in_qs);
     robots_in_qs.iter().product::<usize>()
 }
 
@@ -118,18 +118,18 @@ pub fn part2(inp: &str) -> impl Display {
         }
         // println!("GRID AT i={} has qs {:?}", i, robots_in_qs);
         if check_bots_in_row(&grid) {
-            println!("GRID AT i={}", i);
-            for row in grid.rows() {
-                for &cell in row.iter() {
-                    let char_to_print = match cell {
-                        0 => '.',
-                        1..=9 => char::from_digit(cell as u32, 10).unwrap(),
-                        _ => 'X',
-                    };
-                    print!("{}", char_to_print);
-                }
-                println!(); // New line after each row
-            }
+            // println!("GRID AT i={}", i);
+            // for row in grid.rows() {
+            //     for &cell in row.iter() {
+            //         let char_to_print = match cell {
+            //             0 => '.',
+            //             1..=9 => char::from_digit(cell as u32, 10).unwrap(),
+            //             _ => 'X',
+            //         };
+            //         print!("{}", char_to_print);
+            //     }
+            //     println!(); // New line after each row
+            // }
             return i;
         }
     }
