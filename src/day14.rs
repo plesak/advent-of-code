@@ -101,7 +101,8 @@ pub fn part2(inp: &str) -> impl Display {
         robots.push((p_x, p_y, v_x, v_y));
     }
 
-    for i in 3333..=10000 {
+    // pattern will repeat after nrows*ncols
+    for i in 1..=NROWS * NCOLS {
         // if i % 1000 == 0 {
         //     println!("working on iteration {}", i);
         // }
@@ -133,5 +134,5 @@ pub fn part2(inp: &str) -> impl Display {
             return i;
         }
     }
-    0
+    -1
 }
