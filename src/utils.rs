@@ -8,6 +8,23 @@ pub fn inp_to_array2(input:Vec<String>) -> Array2<char> {
     Array2::from_shape_vec((nrows, ncols), flat_vec).unwrap()
 }
 
+pub fn inp_to_array2_char(input: &str) -> (usize, usize, Array2<char>) {
+    let inp = input.lines().collect::<Vec<&str>>();
+    let nrows = inp.len();
+    let ncols = inp[0].len();
+    let flat_vec: Vec<char> = inp.concat().chars().collect();
+    (nrows, ncols, Array2::from_shape_vec((nrows, ncols), flat_vec).unwrap())
+}
+
+pub fn inp_to_array2_usize(input: &str) -> Array2<usize> {
+    let inp = input.lines().collect::<Vec<&str>>();
+    let nrows = inp.len();
+    let ncols = inp[0].len();
+    let flat_vec: Vec<usize> = inp.concat().chars().map(|x| x.to_digit(10).unwrap() as usize).collect();
+    Array2::from_shape_vec((nrows, ncols), flat_vec).unwrap()
+}
+
+
 // pub fn flood_from_coords(coords:Vec<(i64, i64)>, incl_border:bool) -> i64 {
 //     // calculates the number of grid points flooded from a list of vertices
 //     // list of vertices must be in order (clockwise or counterclockwise)

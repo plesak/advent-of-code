@@ -1,17 +1,9 @@
-use ndarray::Array2;
+use crate::utils;
 use std::collections::HashSet;
 use std::fmt::Display;
 
-fn inp_to_array2(input: &str) -> (usize, usize, Array2<char>) {
-    let inp = input.lines().collect::<Vec<&str>>();
-    let nrows = inp.len();
-    let ncols = inp[0].len();
-    let flat_vec: Vec<char> = inp.concat().chars().collect();
-    (nrows, ncols, Array2::from_shape_vec((nrows, ncols), flat_vec).unwrap())
-}
-
 pub fn part1(inp: &str) -> impl Display {
-    let (nrows, ncols, grid) = inp_to_array2(inp);
+    let (nrows, ncols, grid) = utils::inp_to_array2_char(inp);
 
     let mut checked: HashSet<(usize, usize)> = HashSet::new();
     let mut total_fence_needed = 0;
@@ -86,7 +78,7 @@ pub fn part1(inp: &str) -> impl Display {
 }
 
 pub fn part2(inp: &str) -> impl Display {
-    let (nrows, ncols, grid) = inp_to_array2(inp);
+    let (nrows, ncols, grid) = utils::inp_to_array2_char(inp);
 
     let mut checked: HashSet<(usize, usize)> = HashSet::new();
     let mut total_fence_needed = 0;
